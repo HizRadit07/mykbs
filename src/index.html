@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./static/submitFacts.js"></script>
+    <title>Diagnosis Helper Dr K.</title>
+</head>
+<body>
+    <h1>Sistem Pembantu Diagnosis</h1>
+    <p>Ini adalah aplikasi web sederhana yang mengimplementasikan Knowledge Based System</p>
+    <p>Tujuan aplikasi web ini adalah membantu diagnosis penyakit umum THT berdasarkan kondisi / keluhan</p>
+    <h2>Mohon jawab pertanyaan berikut ini untuk mendapatkan diagnosis anda</h2>
+    <form id="myform">
+        <!--question 1-->
+        <p>1. Berapa usia anda?</p>
+        <input type="radio" id="usia_1" name="usia" value="usia_1">
+        <label for="usia_1">0-10 Tahun</label><br>
+        <input type="radio" id="usia_2" name="usia" value="usia_2">
+        <label for="usia_2">10-20 Tahun</label><br>
+        <input type="radio" id="usia_3" name="usia" value="usia_3">
+        <label for="usia_3">>20 Tahun</label><br>
+
+        <!--question 2-->
+        <p>2. Apa warna cairan yang keluar dari hidung Anda?</p>
+        <input type="radio" id="warna_1" name="warna" value="bening">
+        <label for="warna_1">Tidak berwarna / bening</label><br>
+        <input type="radio" id="warna_2" name="warna" value="kuning">
+        <label for="warna_2">Kuning / kekuningan</label><br>
+        <input type="radio" id="warna_3" name="warna" value="hijau">
+        <label for="warna_3">hijau / kehijauan</label><br>
+        <input type="radio" id="warna_4" name="warna" value="darah">
+        <label for="warna_4">bercampur darah / merah</label><br>
+
+        <!--question 3-->
+        <p>3. Bagaimana konsistensi / tekstur dari cairan yang keluar dari hidung anda?</p>
+        <input type="radio" id="tekstur_1" name="tekstur" value="kental">
+        <label for="tekstur_1">kental</label><br>
+        <input type="radio" id="tekstur_2" name="tekstur" value="encer">
+        <label for="no">encer</label><br>
+
+        
+        <!--question 4-->
+        <p>4. Kira-kira, pada waktu kapan munculnya cairan dari hidung anda?</p>
+        <input type="radio" id="waktu_1" name="waktu" value="hanya_pagi">
+        <label for="waktu_1">hanya di pagi hari</label><br>
+        <input type="radio" id="waktu_2" name="waktu" value="sepanjang_hari">
+        <label for="waktu_2">sepanjang hari</label><br>
+
+        <!--question 5-->
+        <p>5. Apakah anda memperhatikan adanya bau berbeda dari hidung anda?</p>
+        <input type="radio" id="bau_1" name="bau" value="ada">
+        <label for="bau_1">ada bau berbeda</label><br>
+        <input type="radio" id="bau_2" name="bau" value="tidak_ada">
+        <label for="bau_2">tidak ada bau</label><br>
+
+        <!--question 6-->
+        <p>6. Apakah anda merasa gangguan / tersumbat / keluar cairan dari satu sisi / kedua sisi lubang hidung?</p>
+        <input type="radio" id="sisi_1" name="sisi" value="satu_sisi">
+        <label for="sisi_1">hanya pada 1 sisi lubang hidung</label><br>
+        <input type="radio" id="sisi_2" name="sisi" value="dua_sisi">
+        <label for="sisi_2">ada di 2 sisi lubang hidung</label><br>
+
+        <!--question 7-->
+        <p>7. Apakah gangguan anda disertai gejala lain? (bisa pilih lebih dari 1)</p>
+        <input type="checkbox" id="gejala_1" name="gejala" value="pilek">
+        <label for="gejala_1">pilek</label><br>
+        <input type="checkbox" id="gejala_2" name="gejala" value="bersin">
+        <label for="gejala_2">bersin-bersin</label><br>
+        <input type="checkbox" id="gejala_3" name="gejala" value="hidung_mampet">
+        <label for="gejala_3">hidung mampet</label><br>
+        <input type="checkbox" id="gejala_4" name="gejala" value="gatal_mata">
+        <label for="gejala_4">gatal di dekat mata</label><br>
+        <input type="checkbox" id="gejala_5" name="gejala" value="nyeri_pangkal_hidung">
+        <label for="gejala_5">nyeri di pangkal hidung</label><br>
+
+        <br>
+        <button  type ='button' id="submit_btn" onclick="submitFacts()">submit</button>
+    </form>
+</body>
+</html>

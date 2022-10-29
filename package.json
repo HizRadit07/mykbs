@@ -1,0 +1,24 @@
+{
+  "name": "mykbs",
+  "version": "1.0.0",
+  "description": "knowledge based system with rules based on the experience of an ENT Doctor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HizRadit07/mykbs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HizRadit07/mykbs/issues"
+  },
+  "homepage": "https://github.com/HizRadit07/mykbs#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "json-rules-engine": "^6.1.2",
+    "nodemon": "^2.0.20"
+  }
+}
