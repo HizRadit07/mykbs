@@ -1,7 +1,7 @@
 const { Engine } = require('json-rules-engine')
 
 let engine = new Engine()
-//rule 1, rhinitis alergi
+
 engine.addRule({
     conditions: {
         all: [
@@ -18,19 +18,24 @@ engine.addRule({
             {
                 any:[
                     {
-                        fact:"bersin",
-                        operator:"in",
-                        value:"gejala"
+                        fact:"gejala",
+                        operator:"contains",
+                        value:"pilek"
                     },
                     {
-                        fact:"hidung_mampet",
-                        operator:"in",
-                        value:"gejala"
+                        fact:"gejala",
+                        operator:"contains",
+                        value:"bersin"
                     },
                     {
-                        fact:"gatal_mata",
-                        operator:"in",
-                        value:"gejala"
+                        fact:"gejala",
+                        operator:"contains",
+                        value:"hidung_mampet"
+                    },
+                    {
+                        fact:"gejala",
+                        operator:"contains",
+                        value:"gatal_mata"
                     },
                 ]
             },
@@ -72,9 +77,9 @@ engine.addRule({
                 value:"sepanjang_hari"
             },
             {
-                fact:"nyeri_pangkal_hidung",
+                fact:"gejala",
                 operator:"in",
-                value:"gejala"
+                value:"nyeri_pangkal_hidung"
             },
             {
                 any:[
@@ -211,3 +216,5 @@ engine.addRule({
         }
     }
 })
+
+module.exports = engine
