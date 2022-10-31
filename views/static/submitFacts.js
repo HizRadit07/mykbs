@@ -52,7 +52,10 @@ const submitFacts = () => {
             headers: {'Content-Type': 'application/json'}, 
             body: JSON.stringify(facts)
           }).then(res => res.json())
-          .then(res => console.log(res));
+          .then(res => {
+            console.log(res)
+            //todo: handle tampilin hasil to UI here
+        });
    
     }catch(err){
         console.log(err)

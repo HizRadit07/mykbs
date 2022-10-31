@@ -77,9 +77,23 @@ engine.addRule({
                 value:"sepanjang_hari"
             },
             {
-                fact:"gejala",
-                operator:"in",
-                value:"nyeri_pangkal_hidung"
+                any:[
+                    {
+                        fact:"gejala",
+                        operator:"contains",
+                        value:"pilek"
+                    },
+                    {
+                        fact:"gejala",
+                        operator:"contains",
+                        value:"hidung_mampet"
+                    },
+                    {
+                        fact:"gejala",
+                        operator:"contains",
+                        value:"nyeri_pangkal_hidung"
+                    },
+                ]
             },
             {
                 any:[
