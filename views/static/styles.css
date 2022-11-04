@@ -30,6 +30,10 @@ p {
     margin: 5px 0px;
 }
 
+#title2 {
+    text-align: center;
+}
+
 /* LIST */
 
 ol {
@@ -50,6 +54,11 @@ ol li {
 ol li::before{
     content: counter(num) ".";
     padding-right: 10px;
+}
+
+.result {
+    font-size: large;
+    list-style-type:square;
 }
 
 /* FORM */

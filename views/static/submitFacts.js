@@ -54,7 +54,20 @@ const submitFacts = () => {
           }).then(res => res.json())
           .then(res => {
             console.log(res)
-            //todo: handle tampilin hasil to UI here
+            let comp = document.getElementById('result');
+            if (res.length === 0) {
+                comp.innerHTML = "Tidak ada gejala"
+            } else {
+                comp.innerHTML = "<h2 id=\"title2\">Hasil Diagnosa</h2>";
+                comp.style.display = "block";
+                res.forEach(element => {
+                    comp.innerHTML += "<li class=\"result\">" + element.params.message + "</li>" 
+                });
+            }
+            window.scrollBy({
+                top: -window.innerHeight,
+                behavior: "smooth"
+            });
         });
    
     }catch(err){
