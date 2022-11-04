@@ -56,14 +56,17 @@ const submitFacts = () => {
             console.log(res)
             let comp = document.getElementById('result');
             if (res.length === 0) {
-                comp.innerHTML = "Tidak ada gejala"
+                comp.style.display = "block";
+                comp.innerHTML = "<h2 id=\"title2\">Hasil Diagnosis</h2>"
+                comp.innerHTML += "<li class=\"result\">" + "Belum terdapat diagnosis akurat" + "</li>" 
             } else {
-                comp.innerHTML = "<h2 id=\"title2\">Hasil Diagnosa</h2>";
+                comp.innerHTML = "<h2 id=\"title2\">Hasil Diagnosis</h2>";
                 comp.style.display = "block";
                 res.forEach(element => {
                     comp.innerHTML += "<li class=\"result\">" + element.params.message + "</li>" 
                 });
             }
+            comp.innerHTML += "<br/> <p> Mohon periksa ke dokter untuk diagnosis lebih lanjut. </p>"
             window.scrollBy({
                 top: -window.innerHeight,
                 behavior: "smooth"
